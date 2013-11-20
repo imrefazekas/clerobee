@@ -1,0 +1,49 @@
+{
+  "name": "clerobee",
+  "version": "0.0.1",
+  "description": "Key/UUID generator providing facility for management of ids in a distributed environment and complex scenarios.",
+  "keywords": [
+    "uid",
+    "generator",
+    "oid",
+    "uid",
+    "uuid",
+    "uniqueid",
+    "unique id",
+    "short id",
+    "primary key",
+    "distributed environment",
+    "security"
+  ],
+  "homepage": "https://github.com/imrefazekas/clerobee",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/imrefazekas/clerobee.git"
+  },
+  "bugs": {
+    "url": "http://github.com/imrefazekas/clerobee/issues"
+  },
+  "author": {
+    "name": "Imre Fazekas",
+    "email": "imre.fazekas@gmail.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib/clerobee.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6",
+    "grunt-contrib-nodeunit": "~0.2",
+    "should": "~1.2"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "_id": "clerobee@0.0.1"
+}
