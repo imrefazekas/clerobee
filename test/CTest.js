@@ -20,8 +20,8 @@ exports.group = {
 		var pID = cerobee.generate( reference, 128 );
 		console.log( '\n pID:', pID, pID.length );
 
-		console.log( '\n pID is referenced:', cerobee.isReferenced( { email:'tests@provi.org' }, 128, pID ) );
-		console.log( '\n pID is referenced:', cerobee.isReferenced( reference, 128, pID ) );
+		console.log( '\n pID is referenced:', cerobee.isSourced( { email:'tests@provi.org' }, 128, pID ) );
+		console.log( '\n pID is referenced:', cerobee.isSourced( reference, 128, pID ) );
 
 		test.done( );
 	}
