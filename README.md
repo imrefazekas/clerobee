@@ -37,6 +37,8 @@ var nID = cerobee.generate();
 // generate a normal UID with length of 16
 var nID_2 = cerobee.generate( 16 );
 
+...
+
 // Generates derived UID using the 'nID' as basis.
 // Its length will be the same: 128
 var sID = cerobee.generate( nID );
@@ -45,6 +47,7 @@ var sID = cerobee.generate( nID );
 // Test will fail will any other UIDs but 'sID'
 var test_1 = cerobee.isDerived( nID, sID );
 
+...
 
 // Creates user data
 var customer = { email:'test@provider.org' };
