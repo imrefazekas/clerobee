@@ -5,17 +5,17 @@ Clerobee - a featureful UID generator
 
 ## Use cases
 Following use cases are supported:
-- Normal UIDs:
+- __Normal UIDs:__
 	Identifiers for general usage with length between 4 and 256. Can be used as cryptographic keys, user IDs, session keys, etc.
 
-- Derived UIDs:
+- __Derived UIDs:__
 	To express ownership-like relations between identifiers.
 
 	If you have to identify devices and be able to link them to a user with verify the ownership against the userID, then simply generate a UID for the user and generate derived UIDs for the devices.
 
 	Therethrough the ownership of the device where for example a REST request is coming, can be verified.
 
-- Sourced UIDs:
+- __Sourced UIDs:__
 	Using a JS object data as source for the generation process.
 
 	For example to generate product/license keys based on user information and to check if they can be matched while a possible registration process later on.
