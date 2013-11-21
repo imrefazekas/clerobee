@@ -16,8 +16,12 @@ exports.group = {
 		console.log( '\n is sID derived:', cerobee.isDerived( mID, sID ) );
 
 
-		var pID = cerobee.generate( { email:'test@provider.org' }, 128 );
+		var reference = { email:'test@provider.org' };
+		var pID = cerobee.generate( reference, 128 );
 		console.log( '\n pID:', pID, pID.length );
+
+		console.log( '\n pID is referenced:', cerobee.isReferenced( { email:'tests@provi.org' }, 128, pID ) );
+		console.log( '\n pID is referenced:', cerobee.isReferenced( reference, 128, pID ) );
 
 		test.done( );
 	}
