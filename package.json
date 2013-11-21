@@ -1,7 +1,7 @@
 {
   "name": "clerobee",
   "version": "0.0.1",
-  "description": "Key/UUID generator providing facility for management of ids in a distributed environment and complex scenarios.",
+  "description": "A featureful dependency-free UID generator",
   "keywords": [
     "uid",
     "generator",
@@ -10,8 +10,8 @@
     "uuid",
     "uniqueid",
     "unique id",
-    "short id",
     "primary key",
+    "license key",
     "distributed environment",
     "security"
   ],
@@ -25,7 +25,7 @@
   },
   "author": {
     "name": "Imre Fazekas",
-    "email": "imre.fazekas@gmail.com"
+    "email": "mail@imrefazekas.me"
   },
   "licenses": [
     {
