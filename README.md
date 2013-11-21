@@ -1,4 +1,4 @@
-clerobee
+Clerobee - a featureful UID generator
 ========
 [clerobee](https://github.com/imrefazekas/clerobee) is a very handy utility library allowing to generate UIDs considering actual time, network resources and process in a distributed environment.
 
@@ -21,15 +21,12 @@ Following use cases are supported:
 	For example to generate product/license keys based on user information and to check if they can be matched while a possible registration process later on.
 
 
-## License
-[MIT](http://www.opensource.org/licenses/mit-license.php)
-
-
 ## Usage
 ```javascript
 var Cerobee = require('clerobee');
 
-// optional default length for the IDS is passed. 16 will be used if nothing is given.
+// optional default length for the IDS is passed.
+// 16 would be used if nothing is given.
 var cerobee = new Cerobee( 128 );
 
 ...
@@ -40,10 +37,12 @@ var nID = cerobee.generate();
 // generate a normal UID with length of 16
 var nID_2 = cerobee.generate( 16 );
 
-// Generates derived UID using the 'nID' as basis. Its length will be the same: 128
+// Generates derived UID using the 'nID' as basis.
+// Its length will be the same: 128
 var sID = cerobee.generate( nID );
 
-// Tests if 'sID' is really derived from 'nID'. Test will fail will any other UIDs but 'sID'
+// Tests if 'sID' is really derived from 'nID'.
+// Test will fail will any other UIDs but 'sID'
 var test_1 = cerobee.isDerived( nID, sID );
 
 
@@ -53,11 +52,16 @@ var customer = { email:'test@provider.org' };
 // Generates Sourced UID based on customer data with length of 128
 var pID = cerobee.generate( customer, 128 );
 
-// Tests if the given sourced UID relly carries the given user data. Test will fail with any other pair of user data and UID but this
+// Tests if the given sourced UID relly carries the given user data.
+// Test will fail with any other pair of user data and UID but this
 var test_2 = cerobee.isSourced( reference, 128, pID );
 ```
 
 And that's it!
+
+
+## License
+[MIT](http://www.opensource.org/licenses/mit-license.php)
 
 
 ## Changelog
