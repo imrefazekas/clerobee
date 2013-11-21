@@ -2,7 +2,7 @@ var os = require('os');
 var should = require('should');
 
 var Cerobee = require('../lib/clerobee');
-var cerobee = new Cerobee( 16 );
+var cerobee = new Cerobee( 256 );
 
 exports.group = {
 
@@ -12,6 +12,7 @@ exports.group = {
 		console.log( '\nmID:', mID, mID.length );
 		var sID = cerobee.generate( mID );
 		console.log( '\nderived:', sID, sID.length );
+
 		console.log( '\nisDerived:', cerobee.isDerived( mID, cerobee.generate() ) );
 		console.log( '\nisDerived:', cerobee.isDerived( mID, sID ) );
 
