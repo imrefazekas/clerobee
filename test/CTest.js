@@ -7,6 +7,9 @@ var cerobee = new Cerobee( 256 );
 exports.group = {
 
 	testServices: function(test){
+		console.log( '\n mID:', cerobee.generate(128) );
+		console.log( '\n mID:', cerobee.generate(128) );
+
 		var mID = cerobee.generate();
 		console.log( '\n mID:', mID, mID.length );
 		var sID = cerobee.generate( mID );
@@ -14,7 +17,6 @@ exports.group = {
 
 		console.log( '\n is new Derived:', cerobee.isDerived( mID, cerobee.generate() ) );
 		console.log( '\n is sID derived:', cerobee.isDerived( mID, sID ) );
-
 
 		var reference = { email:'test@provider.org' };
 		var pID = cerobee.generate( reference, 128 );
