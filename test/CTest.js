@@ -7,8 +7,8 @@ var cerobee = new Cerobee( 256 );
 exports.group = {
 
 	testServices: function(test){
-		console.log( '\n mID:', cerobee.generate(128) );
-		console.log( '\n mID:', cerobee.generate(128) );
+		console.log( '\n mID:', cerobee.generate(16) );
+		console.log( '\n mID:', cerobee.generate(16) );
 
 		var mID = cerobee.generate();
 		console.log( '\n mID:', mID, mID.length );

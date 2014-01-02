@@ -38,9 +38,9 @@
   },
   "devDependencies": {
     "grunt": "~0.4",
-    "grunt-contrib-jshint": "~0.7",
+    "grunt-contrib-jshint": "~0.8",
     "grunt-contrib-nodeunit": "~0.2",
-    "should": "~1.2"
+    "should": "~2"
   },
   "engines": {
     "node": ">= 0.10.0"
