@@ -1,31 +1,53 @@
-var os = require('os');
-var should = require('should');
+var should = require("chai").should();
 
 var Cerobee = require('../lib/clerobee');
 var cerobee = new Cerobee( 256 );
 
-exports.group = {
+describe("clerobee", function () {
 
-	testServices: function(test){
-		console.log( '\n mID:', cerobee.generate(16) );
-		console.log( '\n mID:', cerobee.generate(16) );
+	var mID, sID, reference;
 
-		var mID = cerobee.generate();
+	before(function(done){
+		mID = cerobee.generate();
 		console.log( '\n mID:', mID, mID.length );
-		var sID = cerobee.generate( mID );
+		sID = cerobee.generate( mID );
 		console.log( '\n Derived:', sID, sID.length );
 
-		console.log( '\n is new Derived:', cerobee.isDerived( mID, cerobee.generate() ) );
-		console.log( '\n is sID derived:', cerobee.isDerived( mID, sID ) );
+		reference = { email:'test@provider.org' };
 
-		var reference = { email:'test@provider.org' };
-		var pID = cerobee.generate( reference, 128 );
-		console.log( '\n pID:', pID, pID.length );
+		console.log( '\n Reference:', reference );
 
-		console.log( '\n pID is referenced:', cerobee.isSourced( { email:'tests@provi.org' }, 128, pID ) );
-		console.log( '\n pID is referenced:', cerobee.isSourced( reference, 128, pID ) );
+		done();
+	});
 
-		test.done( );
-	}
+	describe("ids", function () {
+		it('should be generated with correct length', function(done){
+			cerobee.generate(16).should.to.have.length(16);
 
-};
+			done();
+		});
+		it('should be derived correctly', function(done){
+			cerobee.isDerived( mID, cerobee.generate() ).should.to.be.false;
+
+			cerobee.isDerived( mID, sID ).should.to.be.true;
+
+			done();
+		});
+
+		it('should be referred correctly', function(done){
+			var pID = cerobee.generate( reference, 128 );
+
+			pID.should.to.have.length(128);
+
+			cerobee.isSourced( { email:'tests@provi.org' }, 128, pID ).should.to.be.false;
+
+			cerobee.isSourced( reference, 128, pID ).should.to.be.true;
+
+			done();
+		});
+	});
+
+	after(function(done){
+		done();
+	});
+});
