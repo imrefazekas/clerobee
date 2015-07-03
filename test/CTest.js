@@ -8,6 +8,8 @@ describe("clerobee", function () {
 	var mID, sID, reference;
 
 	before(function(done){
+		console.log( cerobee.generate(32) );
+
 		mID = cerobee.generate();
 		console.log( '\n mID:', mID, mID.length );
 		sID = cerobee.generate( mID );
