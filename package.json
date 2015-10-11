@@ -1,6 +1,6 @@
 {
   "name": "clerobee",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A featureful dependency-free UID generator",
   "keywords": [
     "uid",
@@ -33,12 +33,12 @@
   "devDependencies": {
     "chai": "latest",
     "gulp": "latest",
-    "gulp-jshint": "latest",
+    "gulp-eslint": "~1",
     "gulp-load-plugins": "latest",
     "gulp-mocha": "latest"
   },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "_id": "clerobee@0.2.2"
+  "_id": "clerobee@0.3.0"
 }
