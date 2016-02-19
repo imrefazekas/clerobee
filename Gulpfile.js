@@ -1,15 +1,17 @@
-var gulp = global.gulp = require('gulp'),
-	plugins = global.plugins = require("gulp-load-plugins")( { scope: ['devDependencies'] } );;
+'use strict'
 
-gulp.task('eslint', function() {
+let gulp = require('gulp'),
+	plugins = require('gulp-load-plugins')( { scope: ['devDependencies'] } )
+
+gulp.task('lint', function () {
 	return gulp.src( 'vindication.js' )
-		.pipe( global.plugins.eslint() )
-		.pipe( global.plugins.eslint.format() )
-		.pipe( global.plugins.eslint.failOnError() );
-});
+		.pipe( plugins.eslint() )
+		.pipe( plugins.eslint.format() )
+		.pipe( plugins.eslint.failOnError() )
+})
 
-gulp.task( 'mocha', function(callback) {
-	return gulp.src( './test/*.js' ).pipe( global.plugins.mocha({reporter: 'nyan'}) );
-} );
+gulp.task( 'mocha', function (callback) {
+	return gulp.src( './test/*.mocha.js' ).pipe( plugins.mocha({reporter: 'nyan'}) )
+} )
 
-gulp.task( 'default', [ 'eslint', 'mocha' ] );
+gulp.task( 'default', [ 'lint', 'mocha' ] )
