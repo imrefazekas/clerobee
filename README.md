@@ -5,7 +5,7 @@ Clerobee - a featureful UID generator
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 ========
-[clerobee](https://github.com/imrefazekas/clerobee) is a very handy dependency-free utility library allowing to generate UIDs considering actual time, network resources and process in a distributed environment.
+[clerobee](https://github.com/imrefazekas/clerobee) is a very handy utility library allowing to generate UIDs considering actual time, network resources and process in a distributed environment.
 
 
 ## Use cases
