@@ -8,17 +8,12 @@ let should = chai.should()
 
 describe('clerobee', function () {
 
-	var mID, sID, reference
+	var reference
 
 	before(function (done) {
 		console.log( '64::', cerobee.generate(64) )
 		console.log( '48::', cerobee.generate(48) )
 		console.log( '32::', cerobee.generate(32) )
-
-		mID = cerobee.generate()
-		console.log( '\n mID:', mID, mID.length )
-		sID = cerobee.generate( mID )
-		console.log( '\n Derived:', sID, sID.length )
 
 		reference = { email: 'test@provider.org' }
 
@@ -30,13 +25,6 @@ describe('clerobee', function () {
 	describe('ids', function () {
 		it('should be generated with correct length', function (done) {
 			cerobee.generate(16).should.to.have.length(16)
-
-			done()
-		})
-		it('should be derived correctly', function (done) {
-			cerobee.isDerived( mID, cerobee.generate() ).should.to.be.false
-
-			cerobee.isDerived( mID, sID ).should.to.be.true
 
 			done()
 		})
