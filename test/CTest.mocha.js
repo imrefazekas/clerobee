@@ -11,7 +11,9 @@ describe('clerobee', function () {
 	var mID, sID, reference
 
 	before(function (done) {
-		console.log( cerobee.generate(32) )
+		console.log( '64::', cerobee.generate(64) )
+		console.log( '48::', cerobee.generate(48) )
+		console.log( '32::', cerobee.generate(32) )
 
 		mID = cerobee.generate()
 		console.log( '\n mID:', mID, mID.length )
