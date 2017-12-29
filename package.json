@@ -1,6 +1,6 @@
 {
   "name": "clerobee",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "description": "A featureful dependency-free UID generator",
   "keywords": [
     "uid",
@@ -30,10 +30,10 @@
   "license": "MIT",
   "main": "./lib/clerobee.js",
   "dependencies": {
-    "webcrypto": "^0.1.0"
+    "webcrypto": "^0.1.1"
   },
   "devDependencies": {
-    "chai": "^4.1.0",
+    "chai": "^4.1.2",
     "gulp": "^3.9.1",
     "gulp-eslint": "^4.0.0",
     "gulp-load-plugins": "^1.5.0",
