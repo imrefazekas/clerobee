@@ -1,4 +1,4 @@
-'use strict'
+var crypto = require('webcrypto')
 
 var Cerobee = require('../lib/clerobee')
 var cerobee = new Cerobee( 256 )
