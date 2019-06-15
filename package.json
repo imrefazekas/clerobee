@@ -1,6 +1,6 @@
 {
   "name": "clerobee",
-  "version": "0.9.8",
+  "version": "1.0.0",
   "description": "A featureful dependency-free UID generator",
   "keywords": [
     "uid",

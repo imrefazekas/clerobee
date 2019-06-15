@@ -4,3 +4,4 @@ node_modules/
 report/
 dist/
 *.zip
+package-lock.json
