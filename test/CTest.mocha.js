@@ -11,6 +11,12 @@ describe('clerobee', function () {
 	var reference
 
 	before(function (done) {
+		console.log('------', cerobee.getNanoTime(4) )
+		console.log('------', cerobee.getNanoTime(4) )
+		console.log('------', cerobee.getNanoTime(4) )
+		console.log('------', cerobee.getNanoTime(4) )
+		console.log('------', cerobee.getNanoTime(4) )
+
 		console.log( '64::', cerobee.generate(64) )
 		console.log( '48::', cerobee.generate(48) )
 		console.log( '32::', cerobee.generate(32) )
