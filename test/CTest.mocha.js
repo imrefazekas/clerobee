@@ -31,6 +31,10 @@ describe('clerobee', function () {
 	describe('ids', function () {
 		it('should be generated with correct length', function (done) {
 			console.log('>>>>>', cerobee.generate(16))
+			console.log('>>>>>', cerobee.generate(16))
+			console.log('>>>>>', cerobee.generate(16))
+			console.log('>>>>>', cerobee.generate(16))
+			console.log('>>>>>', cerobee.generate(16))
 			cerobee.generate(16).should.to.have.length(16)
 
 			done()
