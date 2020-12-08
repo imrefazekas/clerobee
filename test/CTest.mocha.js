@@ -21,6 +21,8 @@ describe('clerobee', function () {
 		console.log( '48::', cerobee.generate(48) )
 		console.log( '32::', cerobee.generate(32) )
 
+		console.log( 'AbcNum 8::', cerobee.generateAbcNumString(8) )
+
 		reference = { email: 'test@provider.org' }
 
 		console.log( '\n Reference:', reference )
