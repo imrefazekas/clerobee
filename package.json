@@ -1,6 +1,6 @@
 {
   "name": "clerobee",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A featureful dependency-free UID generator",
   "keywords": [
     "uid",
@@ -35,7 +35,6 @@
   "devDependencies": {
     "chai": "^4.2.0"
   },
-  "browser": "./lib/browser.js",
   "engines": {
     "node": ">= 8.0.0"
   }
